@@ -1,0 +1,10 @@
+[build]
+  command = "npm run build"
+  publish = "public"
+  functions = "src/functions"
+  NODE_ENV = "10.0.0"
+
+[[redirects]]
+  from = "/weeklyDinner"
+  to = "/.netlify/functions/weeklyDinner"
+  status = 200

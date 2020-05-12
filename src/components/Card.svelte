@@ -1,11 +1,12 @@
 <script>
+export let dinnerName, weekDay, img;
 </script>
-<div style="position: relative; perspective: 200px;">
+<div style="position: relative;">
 <div class="day-card">
-   <h3>Mandag</h3> 
+   <h3>{weekDay}</h3> 
 </div>
-<div class="food-card">
-    <h2>Lasagne</h2>
+<div class="food-card" style={`background-image: url('${img}')`}>
+    <h2>{dinnerName}</h2>
 </div>
 </div>
 
@@ -17,7 +18,7 @@ h2{
 }
 h3{
     margin: 0;
-    font-size: 24px;
+    font-size: 3rem;
 }
 .day-card{
     position: absolute;
@@ -34,8 +35,8 @@ h3{
 }
 .food-card {
     background-color: white;
-    width: 450px;
-    height: 200px;
+    width: 33vw;
+    height: 33vh;
 
     border-radius: 8px;
     box-shadow: 5px 7px 10px 3px rgba(14,30,37,.2);
@@ -53,7 +54,6 @@ h3{
     padding: 24px;
 
 
-    background-image: url('https://images.unsplash.com/photo-1581904243918-7aac00cefed2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=933&q=80');
     background-size: cover;
     background-position: center center;
 

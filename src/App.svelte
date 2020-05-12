@@ -1,12 +1,23 @@
 <script>
 import Card from "./components/Card.svelte";
+let dinners = getWeeklyDinners();
+let currentWeekDay = ((new Date()).getDay() - 1)%7;
+async function getWeeklyDinners(){
+
+	const res = await fetch('/weeklyDinner');
+	const dinners = await res.json();
+	return dinners;
+}
+
 </script>
 
 <main>
 	<h1>Middag</h1>
+	{#await dinners then value}
 	<div class="dinner-info">
-		<Card />	
+		<Card dinnerName={value[currentWeekDay].dinner} weekDay={value[currentWeekDay].day} img={value[currentWeekDay].img} />	
 	</div>
+	{/await}
 </main>
 
 <style>
