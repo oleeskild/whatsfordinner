@@ -12,7 +12,7 @@ async function getWeeklyDinners(){
 </script>
 
 <main>
-	<h1>Middag</h1>
+	<h1>Dagens</h1>
 	{#await dinners then value}
 	<div class="dinner-info">
 		<Card dinnerName={value[currentWeekDay].dinner} weekDay={value[currentWeekDay].day} img={value[currentWeekDay].img} />	
