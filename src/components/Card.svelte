@@ -13,8 +13,10 @@ export let dinnerName, weekDay, img;
 <style>
 h2{
     color: white;
-    font-size: 44px;
+    font-size: 38px;
     border-bottom: 1px solid white;
+    background-color: rgba(0,0,0,0.5);
+    padding: 10px;
 }
 h3{
     margin: 0;
@@ -30,7 +32,7 @@ h3{
     display: flex;
 
     justify-content: flex-start;
-    transform: translate(-20px, 40px);
+    transform: translate(-45px, 40px);
     z-index: 1;
 }
 .food-card {
@@ -56,5 +58,29 @@ h3{
 
     transform: translate(100px, 70px);
 
+}
+
+@media (max-width: 920px){
+    .food-card {
+        width: 66vw;
+        transform: translate(50px, 70px);
+    }
+    h2 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 640px){
+    .food-card {
+        width: 90vw;
+        position:absolute;
+        top:50%;
+        left: 0;
+        transform: translateX(-50%);
+        min-width: 10px;
+    }
+    h2 {
+        font-size: 24px;
+    }
 }
 </style>

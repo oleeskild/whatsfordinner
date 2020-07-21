@@ -29,7 +29,6 @@ async function getWeeklyDinners(){
 		max-width: 240px;
 		margin: 0 auto;
 		font-family: 'Playfair Display', serif;
-		background-image: url('../Foodbg.png');
 		background-size: cover;
 		height:100%;
 	}
