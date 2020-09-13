@@ -2,6 +2,9 @@
 import Card from "./components/Card.svelte";
 let dinners = getWeeklyDinners();
 let currentWeekDay = ((new Date()).getDay() - 1)%7;
+if(currentWeekDay < 0){
+    currentWeekDay = 6;
+}
 async function getWeeklyDinners(){
 
 	const res = await fetch('/weeklyDinner');
