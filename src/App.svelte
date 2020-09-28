@@ -7,7 +7,8 @@ if(currentWeekDay < 0){
 }
 async function getWeeklyDinners(){
 
-	const res = await fetch('/weeklyDinner');
+    let hostname = process.env.hostname || "";
+	const res = await fetch(`${hostname}/weeklyDinner`);
 	const dinners = await res.json();
 	return dinners;
 }
